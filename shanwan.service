@@ -1,0 +1,9 @@
+[Unit]
+Description=Start driver for shanwan dual gamepad
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/shanwan-start.sh
+
+[Install]
+WantedBy=default.target
