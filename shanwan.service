@@ -1,5 +1,6 @@
 [Unit]
 Description=Start driver for shanwan dual gamepad
+After=dev-shanwan.device
 
 [Service]
 Type=oneshot
