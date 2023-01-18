@@ -21,7 +21,7 @@ sha256sums=(SKIP)
 package() {
   cd "${srcdir}/${_pkgname}"
   install -Dm755 shanwan-joystick.py "${pkgdir}/usr/bin/shanwan-joystick.py"
-  install -Dm755 shanwan_start.sh "${pkgdir}/usr/bin/shanwan-start.sh"
+  install -Dm755 shanwan-start.sh "${pkgdir}/usr/bin/shanwan-start.sh"
   install -Dm644 shanwan.service "${pkgdir}/usr/lib/systemd/system/shanwan.service"
   install -Dm644 93-shanwan.rules "${pkgdir}/etc/udev/rules.d/93-shanwan.rules"
   install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
