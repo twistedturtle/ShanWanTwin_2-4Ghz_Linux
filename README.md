@@ -1,4 +1,7 @@
-To install on Arch or Arch based distros, such as Manjaro, download the PKGBUILD and run `makepkg -si`.
+#### To install on Arch or Arch based distros, such as Manjaro, download the PKGBUILD and run `makepkg -si`.
+
+
+
 
 ## From the original repo
 ### ShanWanTwin_2-4Ghz_Linux
