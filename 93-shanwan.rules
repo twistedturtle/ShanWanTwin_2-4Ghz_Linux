@@ -1,1 +1,1 @@
-ACTION==“add|remove”, SUBSYSTEM==“usb”, ATTRS{idVendor}==“2563”, ATTRS{idProduct}==“0555”, TAG+=“systemd”, ENV{SYSTEMD_WANTS}+=“shanwan.service”
+ACTION==“add|remove”, SUBSYSTEM==“usb”, ATTRS{idVendor}==“2563”, ATTRS{idProduct}==“0555”, TAG+=“systemd”
