@@ -1,4 +1,6 @@
-#### To install on Arch or Arch based distros, such as Manjaro, download the PKGBUILD and run `makepkg -si`.
+#### To install on Arch based distros download the PKGBUILD and run `makepkg -si`.
+
+For further information consult https://wiki.archlinux.org/title/Makepkg#Usage
 
 
 
