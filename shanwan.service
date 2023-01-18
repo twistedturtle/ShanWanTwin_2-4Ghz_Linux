@@ -7,3 +7,4 @@ ExecStart=/usr/bin/shanwan-start.sh
 
 [Install]
 WantedBy=default.target
+WantedBy=dev-shanwan.device
