@@ -1,8 +1,11 @@
-# ShanWanTwin_2-4Ghz_Linux
+To install on Arch or Arch based distros, such as Manjaro, download the PKGBUILD and run `makepkg -si`.
+
+## From the original repo
+### ShanWanTwin_2-4Ghz_Linux
 Userspace script to split controller input for the Shanwan Wireless Twin controllers (2563:0555)
 
 
-## Requirements
+##### Requirements
 - Python (2.7)
 - python-uinput module
   - Install using [pip](https://pip.pypa.io/en/stable/installing/#id7): `pip install python-uinput`
