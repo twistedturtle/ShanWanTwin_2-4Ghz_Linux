@@ -21,7 +21,6 @@ import sys
 import uinput
 import time
 from collections import defaultdict
-#import struct
 
 # Shanwan Twin USB hidraw driver.
 
@@ -94,11 +93,10 @@ class TwinUSB:
         # FirstID is the joystick id that is in the first byte of the
         # buffer, either 1 or 2. If it's anything else then something
         # went wrong.
-	firstID = ord(firstID)
         if firstID in self.gamepadIds:
             for dev in self.gamepadIds:
                 # 6th byte is shape buttons
-                btn = ord(self.buf[((firstID - 1) * 8) + (dev * 8) + 5])
+                btn = self.buf[((firstID - 1) * 8) + (dev * 8) + 5]
                 # Buttons 1 to 4:
                 self.eventState[dev][0] = -1 if self.eventState[dev][0] and not btn & 16 else btn & 16
                 self.eventState[dev][1] = -1 if self.eventState[dev][1] and not btn & 32 else btn & 32
@@ -106,7 +104,7 @@ class TwinUSB:
                 self.eventState[dev][3] = -1 if self.eventState[dev][3] and not btn & 128 else btn & 128
 
                 # Buttons 5 to 12:
-                btn = ord(self.buf[((firstID - 1) * 8) + (dev * 8) + 6])
+                btn = self.buf[((firstID - 1) * 8) + (dev * 8) + 6]
                 self.eventState[dev][4] = -1 if self.eventState[dev][4] and not btn & 1 else btn & 1
                 self.eventState[dev][5] = -1 if self.eventState[dev][5] and not btn & 2 else btn & 2
                 self.eventState[dev][6] = -1 if self.eventState[dev][6] and not btn & 4 else btn & 4
@@ -135,7 +133,7 @@ class TwinUSB:
                 # the x and y hat axes.
 
                 # Mask off the last 4 bits
-                self.hatDir[dev] = ord(self.buf[((firstID - 1) * 8) + (dev * 8) + 5]) & 0xf
+                self.hatDir[dev] = self.buf[((firstID - 1) * 8) + (dev * 8) + 5] & 0xf
                 if self.hatDir[dev] == 15:
                     self.eventState[dev][16] = 0
                     self.eventState[dev][17] = 0
