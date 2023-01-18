@@ -25,4 +25,5 @@ package() {
   install -Dm644 shanwan.service "${pkgdir}/usr/lib/systemd/system/shanwan.service"
   install -Dm644 93-shanwan.rules "${pkgdir}/etc/udev/rules.d/93-shanwan.rules"
   install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+  install -Dm644 shanwan-twin.cfg "${pkgdir}/usr/lib/mame/ctrlr/shanwan-twin.cfg"
 }
